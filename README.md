@@ -1,6 +1,6 @@
 #TELEGRAM BOT EXAMPLE WITH NODE.JS
 
-This is a telegram bot example using Node.js using these modules
+This is a telegram bot example using Node.js and using these modules
 
 **node-telegram-bot-api** - ([@yagop](https://github.com/yagop))
 
@@ -36,7 +36,7 @@ You will receive your bot url and a token. Copy and save your token for the next
 ### 2. Create a file with your token
 
 If you want to use this example, write your token in json format and export it.
-You can make it by writing this unix command 
+You can do it by writing this unix command 
 
 ```shell
 $ echo "module.exports = { token : 'YOUR_BOT_TOKEN'}" } > con.js

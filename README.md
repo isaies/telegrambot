@@ -93,7 +93,7 @@ Simulates the echo function, the bot will answer the same word you wrote.
 A simple text message, the bot will answer to you with a photo ;)
 
 
-### ** Voice **
+### **Voice**
 
 If you send to the bot a voice recording, it will download it and store it in your `./voice` directory.
 It will answer to you the recording duration and the file size

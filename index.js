@@ -20,14 +20,18 @@ bot.getMe()
 
 
 // Welcome message, list of available actions
-bot.onText(/\/start/, function(msg){
+bot.on(/\/start/, function(msg){
 	
 	var fromId = msg.from.id;
 	var resp = "Hola!\n"+
 		"Acciones disponibles: \n"+
-		"/say mensaje \n"+
+		"/say \n"+
+		"/photo\n"+
+		
 		"hola\n"+
-		"";
+		""+
+		""+
+		"Salúdame con un \"hola\"";
 	bot.sendMessage(fromId, resp);
 			
 });
@@ -58,7 +62,7 @@ bot.on('message', function (msg) {
 	// photo can be: a file path, a stream or a Telegram file_id
 	var photo = 'images/hola.png';
 	//console.log(msg.text);
-	if(msg.text!="hola"){
+	if(msg.text.toLowerCase()!="hola"){
 		console.log(msg.text);
 		//bot.sendMessage(msg.from.id,"Escribe hola" );
 	}else{	
@@ -66,18 +70,25 @@ bot.on('message', function (msg) {
 	}
 });
 
-// Receive a photo
-// TODO: search for local photo matches
-bot.onText(/\/foto (.+)/, function(msg, match){
+// Receive a photo by sending its name
+// TODO: enable extensions
+bot.onText(/\/photo (.+)/, function(msg, match){
 	
-		var fromId = msg.from.id;
+	var fromId = msg.from.id;
 	var photoName = match[1];
-	var photos = [];
-
+	var photos = fs.readdirSync('images');
 	
-	var resp = "No tenemos fotos de:"+photoName;
-	console.log(match);
-	bot.sendMessage(fromId, resp);
+	photos.forEach(function(elem){
+
+		console.log(elem, photoName);	
+		if(elem==photoName){
+			
+			bot.sendPhoto(msg.chat.id, 'images/'+elem, {caption: "Aquí la tienes!"});
+		}
+	});
+
+
+	console.log("acaba bucle", photoName);
 
 });
 
@@ -86,7 +97,6 @@ bot.onText(/\/place (.+)/, function(msg, match){
 
 	var fromId = msg.from.id;
 	var place = match[1];
-	console.log(place, match);
 
 	
 
@@ -94,7 +104,7 @@ bot.onText(/\/place (.+)/, function(msg, match){
 });
 
 // TODO: managing inline messages
-bot.onText("inlineTest", function(msg){
+bot.on("inlineTest", function(msg){
 		
 	var results = ["un", "dos", "tres"];
 	var inlineQueryId= "23";

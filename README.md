@@ -29,7 +29,7 @@ Now you can choose a name for your bot
 
 >Write your bot name
 
->Finally, choose a bot name for your bot in this format `_name_bot`
+>Finally, choose a bot name for your bot in this format `name_bot`
 
 You will receive your bot url and a token. Copy and save your token for the next step.
 

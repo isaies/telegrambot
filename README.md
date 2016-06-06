@@ -3,12 +3,15 @@
 This is a telegram bot example using Node.js using these modules
 
 **node-telegram-bot-api** - ([@yagop](https://github.com/yagop))
+
 [https://github.com/yagop/node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)
 
 **https**
+
 [https://nodejs.org/api/https.html](https://nodejs.org/api/https.html)
 
 **fs**
+
 [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html)
 
 ## Setting up your bot
@@ -90,9 +93,9 @@ Simulates the echo function, the bot will answer the same word you wrote.
 A simple text message, the bot will answer to you with a photo ;)
 
 
-### *** Voice ***
+### ** Voice **
 
-If you send to the bot a voice recording, it will download it and store it in your `./voice/` directory.
+If you send to the bot a voice recording, it will download it and store it in your `./voice` directory.
 It will answer to you the recording duration and the file size
 
 

@@ -1,6 +1,6 @@
 #TELEGRAM BOT EXAMPLE WITH NODE.JS
 
-This is a telegram bot example using Node.js and using these modules
+This is a telegram bot example using Node.js with these modules:
 
 **node-telegram-bot-api** - ([@yagop](https://github.com/yagop))
 
@@ -23,13 +23,13 @@ Add the `@botfather` to your telegram contact list.
 You can add it directly by clicking here: [@botfather](http://telegram.me/botfather)
 
 
-- Write `/newbot`
+>Write `/newbot`
 
 Now you can choose a name for your bot
 
-- Write your bot name
+>Write your bot name
 
-- Finally, choose a bot name for your bot in this format `_name_bot`
+>Finally, choose a bot name for your bot in this format `_name_bot`
 
 You will receive your bot url and a token. Copy and save your token for the next step.
 
@@ -46,13 +46,13 @@ or create a new `con.js` file with this:
 
 ```
 module.exports = {
-	token : YOUR_TOKEN
+	token : 'YOUR_TOKEN'
 }
 ```
 
 ### 3. Install all dependences 
 
-By now, I'm using only a external dependence. You can add it in two ways:
+Right now, I'm using only an external dependence. You can add it in two ways:
 
 **Using the `package.json` in this repository:**
 ```
@@ -61,7 +61,7 @@ npm install
 
 _or_
 
-**Install modules manually**
+**Installing modules manually**
 
 - node-telegram-bot-api
 ```
@@ -82,11 +82,11 @@ http://telegram.me/your-bot-name
 
 ### /start
 
-This is the initial required action to wake up your bot. It gives you the current actions
+This is the initial required action to wake up your bot. It gives you the current actions.
 
 ### /say _something_
 
-Simulates the echo function, the bot will answer the same word you wrote.
+Simulates the echo function, the bot will say the same word you wrote.
 
 ### hola
 
@@ -95,8 +95,8 @@ A simple text message, the bot will answer to you with a photo ;)
 
 ### **Voice**
 
-If you send to the bot a voice recording, it will download it and store it in your `./voice` directory.
-It will answer to you the recording duration and the file size
+If you send a voice recording to the bot, it will download and store it in your `./voice` directory.
+It will tell you the recording duration and the file size
 
 
 ## TODO:

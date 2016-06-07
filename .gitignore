@@ -2,4 +2,4 @@ con.js
 node_modules/
 voice/*
 *.swp
-images/hola.png
+conf.js

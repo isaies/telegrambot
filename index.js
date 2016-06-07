@@ -1,10 +1,10 @@
-var con = require('./con');
+var conf = require('./conf');
 var TelegramBot = require('node-telegram-bot-api');
 var fs = require('fs');
 var https = require('https');
 
 // Bot with polling
-var bot = new TelegramBot(con.token, {polling: true});
+var bot = new TelegramBot(conf.token, {polling: true});
 
 
 // Get the bot info
@@ -20,7 +20,7 @@ bot.getMe()
 
 
 // Welcome message, list of available actions
-bot.on(/\/start/, function(msg){
+bot.onText(/\/start/, function(msg, matches){
 	
 	var fromId = msg.from.id;
 	var resp = "Hola!\n"+

@@ -20,15 +20,13 @@ bot.getMe()
 
 
 // Welcome message, list of available actions
-bot.on(/\/start/, function(msg){
+bot.onText(/\/start/, function(msg, matches){
 	
 	var fromId = msg.from.id;
 	var resp = "Hola!\n"+
 		"Acciones disponibles: \n"+
 		"/say \n"+
 		"/photo\n"+
-		
-		"hola\n"+
 		""+
 		""+
 		"Salúdame con un \"hola\"";

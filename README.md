@@ -39,7 +39,7 @@ If you want to use this example, write your token in json format and export it.
 You can do it by writing this unix command 
 
 ```shell
-$ echo "module.exports = { token : 'YOUR_BOT_TOKEN'} }"  > conf.js
+$ echo "module.exports = { token : 'YOUR_BOT_TOKEN'} }"  >    conf.js
 ```
 
 or create a new `conf.js` file with this:
